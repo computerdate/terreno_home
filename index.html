@@ -13,9 +13,88 @@
     <title>Terreno</title>
     <link rel="shortcut icon" href="https://d2w9rnfcy7mm78.cloudfront.net/10669290/original_5e6b3cd2eac484e65f0abe61b18a0020.png?1612889183?bc=0">
     <script src="processing-1.4.8.min.js"></script>
-
 </head>
-<body onkeypress="inicio(event)">
+
+	
+<style>
+	  
+a:link {
+	color: #00FF00;
+	font-size: 15px;
+       font-family: Verdana, Geneva, Tahoma, sans-serif;
+       text-decoration: none;
+     }
+	  
+a:visited {
+color: #FFFFFF;
+	font-size: 15px;
+       font-family: Verdana, Geneva, Tahoma, sans-serif;
+	text-decoration: none;
+}
+a:hover {
+color: #00FF00;
+	font-size: 15px;
+       font-family: Verdana, Geneva, Tahoma, sans-serif;
+	text-decoration: underline;
+}
+
+        .body{
+
+        }
+                 .example1 {
+                 height: 50px;
+                 overflow: hidden;
+                  position: fixed;
+    bottom: 0;
+   
+    padding: 10px;
+                }
+                .example1 h6 {
+                 font-size: 0.8em;
+                 color: lime;
+                 font-family: verdana;
+                font-style: inherit;
+                font-stretch: extra-expanded;
+                 font-weight: lighter;
+                 position: fixed;
+                 width: 100%;
+                 height: 100%;
+                 margin: 0;
+                 line-height: 50px;
+                 text-align: center;
+                 /* Starting position */
+                 -moz-transform:translateX(100%);
+                 -webkit-transform:translateX(100%);
+                 transform:translateX(100%);
+                 /* Apply animation to this element */
+                 -moz-animation: example1 15s linear infinite;
+                 -webkit-animation: example1 15s linear infinite;
+                 animation: example1 15s linear infinite;
+                }
+                /* Move it (define the animation) */
+                @-moz-keyframes example1 {
+                 0%   { -moz-transform: translateX(100%); }
+                 100% { -moz-transform: translateX(-100%); }
+                }
+                @-webkit-keyframes example1 {
+                 0%   { -webkit-transform: translateX(100%); }
+                 100% { -webkit-transform: translateX(-100%); }
+                }
+                @keyframes example1 {
+                 0%   {
+                 -moz-transform: translateX(100%); /* Firefox bug fix */
+                 -webkit-transform: translateX(100%); /* Firefox bug fix */
+                 transform: translateX(100%);
+                 }
+                 100% {
+                 -moz-transform: translateX(-100%); /* Firefox bug fix */
+                 -webkit-transform: translateX(-100%); /* Firefox bug fix */
+                 transform: translateX(-100%);
+                 }
+    </style>
+
+	
+	<body onkeypress="inicio(event)">
     <canvas data-processing-sources="ciberterreno.js" style='position: absolute; z-index: auto; width: auto; height: auto; top: auto; right: auto; left: auto' id="canvas"></canvas>
     <script>
         function inicio(event) {
